@@ -56,20 +56,21 @@ The app requests agent data from `https://valorant-api.com/v1/agents?isPlayableC
 ## Project structure
 
 ```text
-app/                     Next.js app entry point and global styles
-components/
-  AgentSlider.tsx        Main agent carousel and navigation controls
-  AgentInfo.tsx          Selected agent's role and ability information
-  SelectedAgent.tsx      Main selected-agent presentation
-hooks/
-  useAgents.ts           Agent data loading state
-  useAgentNavigation.ts  Circular selection and navigation logic
-  useMouseWheel.ts       Mouse-wheel navigation handler
-lib/
-  fetchAgents.ts         VALORANT API request and agent data type
-utils/
-  gradient.ts            Background gradient utility
-fonts/                   Custom VALORANT-inspired fonts
+.
+├── app/                     # Next.js app entry point and global styles
+├── components/
+│   ├── AgentSlider.tsx      # Main agent carousel and navigation controls
+│   ├── AgentInfo.tsx        # Selected agent's role and ability information
+│   └── SelectedAgent.tsx    # Main selected-agent presentation
+├── hooks/
+│   ├── useAgents.ts         # Agent data loading state
+│   ├── useAgentNavigation.ts # Circular selection and navigation logic
+│   └── useMouseWheel.ts     # Mouse-wheel navigation handler
+├── lib/
+│   └── fetchAgents.ts       # VALORANT API request and agent data type
+├── utils/
+│   └── gradient.ts          # Background gradient utility
+└── fonts/                   # Custom VALORANT-inspired fonts
 ```
 
 ## React concepts demonstrated
