@@ -1,58 +1,85 @@
-# README
+# VALORANT Agents Showcase
 
-## AgentSlider Component
+A fan-made, interactive agent browser inspired by the agent selection screen in **VALORANT**. Built with Next.js, React, and TypeScript, the interface presents playable agents with their portraits, roles, abilities, and agent-specific background gradients.
 
-### Overview
+**Live demo:** https://valorant-agents-showcase.vercel.app/
 
-This Next.js website is designed to replicate the agent collection screen from the game Valorant. It features a slider that displays agents with their respective abilities and information, providing a visually engaging and immersive user experience.
+![VALORANT Agents Showcase preview](https://github.com/user-attachments/assets/7165e340-d6c8-4fca-8ff7-0c01fdfa9089)
 
-![screencapture-valorant-agents-showcase-vercel-app-2024-07-21-11_34_27](https://github.com/user-attachments/assets/7165e340-d6c8-4fca-8ff7-0c01fdfa9089)
+## Features
 
-### Features
+- **Agent showcase:** Highlights the selected agent and displays their role and ability information.
+- **Circular navigation:** Browse the agent roster using previous/next buttons or the mouse wheel.
+- **Scrollable agent strip:** Select agents from a carousel of up to 13 visible icons.
+- **Dynamic backgrounds:** The background gradient changes to match the selected agent.
+- **Live agent data:** Fetches playable-agent information from the [VALORANT API](https://valorant-api.com/).
 
-- **Agent Collection Display**: Showcases a list of agents, complete with icons, abilities, and detailed information.
-- **Pagination and Navigation**: Users can navigate through the agents using buttons or mouse wheel, with a seamless circular pagination.
-- **Dynamic Styling**: Background and visual effects adapt based on the currently selected agent.
+## Tech stack
 
-### React Concepts Applied
+- **Next.js 16** and **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Material UI Icons**
+- **VALORANT API** for agent data
 
-#### 1. **State Management**
+## Getting started
 
-The `useState` hook is used to manage the component's state:
-- `agents`: Contains the list of fetched agents.
-- `selectedAgentIndex`: Tracks the currently selected agent's index.
-- `startIndex`: Manages the starting index for the visible subset of agents.
+### Prerequisites
 
-#### 2. **Side Effects**
+- Node.js and npm
 
-The `useEffect` hook handles side effects:
-- **Data Fetching**: Fetches agent data from an external API when the component mounts.
-- **Pagination Update**: Updates the visible subset of agents and the `selectedAgentIndex` based on the `startIndex` and the total list of agents.
+### Run locally
 
-#### 3. **Event Handling**
+1. Clone the repository:
 
-- **Mouse Wheel**: Enables navigation through the agent list using the mouse wheel.
-- **Button Clicks**: Allows navigation through "Prev" and "Next" buttons.
+   ```bash
+   git clone https://github.com/sans-script/valorant-agents-showcase.git
+   cd valorant-agents-showcase
+   ```
 
-#### 4. **Dynamic Styling**
+2. Install dependencies:
 
-- **Background Gradient**: The background is dynamically set based on the selected agent's gradient colors using inline styles.
-- **Agent Highlighting**: The border and opacity of agent icons are adjusted based on whether they are currently selected.
+   ```bash
+   npm install
+   ```
 
-### 5. **Component Composition**
+3. Start the development server:
 
-- **AgentSlider Component**: Manages the slider's display logic, including agent selection and pagination.
-- **AgentInfo Component**: Displays detailed information about the selected agent.
-- **SelectedAgent Component**: Showcases the currently selected agent prominently.
-- **Hooks**: Custom hooks (`useAgents`, `useAgentNavigation`, `useMouseWheel`) manage data fetching, navigation logic, and mouse wheel events.
+   ```bash
+   npm run dev
+   ```
 
-### Pagination and Selection
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The `AgentSlider` component implements circular pagination to display a subset of agents, creating a continuous scrolling effect:
+The app requests agent data from `https://valorant-api.com/v1/agents?isPlayableCharacter=true`, so loading the roster requires an internet connection and the API to be available.
 
-1. **Slicing and Concatenating**: The list of agents is sliced to show a fixed number of agents (e.g., 13). If the end of the list is reached, it wraps around to the beginning.
-2. **Updating Selection**: The `selectedAgentIndex` is updated to reflect the center of the visible subset of agents, ensuring that the currently selected agent is always centered.
+## Project structure
 
-### Conclusion
+```text
+app/                     Next.js app entry point and global styles
+components/
+  AgentSlider.tsx        Main agent carousel and navigation controls
+  AgentInfo.tsx          Selected agent's role and ability information
+  SelectedAgent.tsx      Main selected-agent presentation
+hooks/
+  useAgents.ts           Agent data loading state
+  useAgentNavigation.ts  Circular selection and navigation logic
+  useMouseWheel.ts       Mouse-wheel navigation handler
+lib/
+  fetchAgents.ts         VALORANT API request and agent data type
+utils/
+  gradient.ts            Background gradient utility
+fonts/                   Custom VALORANT-inspired fonts
+```
 
-The `AgentSlider` component combines several advanced React concepts to create a dynamic and engaging user interface. By leveraging state management, side effects, event handling, dynamic styling, and custom hooks, the component provides a seamless and immersive experience for viewing and interacting with agents of Valorant.
+## React concepts demonstrated
+
+- **State and effects:** `useState` and `useEffect` manage fetched agent data and selection state.
+- **Custom hooks:** Data loading, navigation, and mouse-wheel handling are separated into reusable hooks.
+- **Component composition:** The slider, selected-agent view, and agent information panel have distinct responsibilities.
+- **Event handling:** Button clicks and mouse-wheel input move through the roster.
+- **Dynamic rendering and styling:** Agent data drives the displayed content, selected-item styling, and background gradient.
+
+## Notes
+
+This is an unofficial fan project made for learning and UI experimentation. VALORANT and its associated names, artwork, and other assets belong to their respective owners. This project is not affiliated with or endorsed by Riot Games.
