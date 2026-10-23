@@ -2,7 +2,7 @@
 
 A fan-made, interactive agent browser inspired by the agent selection screen in **VALORANT**. Built with Next.js, React, and TypeScript, the interface presents playable agents with their portraits, roles, abilities, and agent-specific background gradients.
 
-**Live demo:** https://valorantagents-browser.vercel.app/
+**Live demo:** https://valorantagentsbrowser.vercel.app/
 
 ![VALORANT Agent Browser preview](https://github.com/user-attachments/assets/7165e340-d6c8-4fca-8ff7-0c01fdfa9089)
 
