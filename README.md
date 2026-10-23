@@ -8,7 +8,7 @@ A fan-made, interactive agent browser inspired by the agent selection screen in 
 
 ## Features
 
-- **Agent showcase:** Highlights the selected agent and displays their role and ability information.
+- **Agent browser:** Highlights the selected agent and displays their role and ability information.
 - **Circular navigation:** Browse the agent roster using previous/next buttons or the mouse wheel.
 - **Scrollable agent strip:** Select agents from a carousel of up to 13 visible icons.
 - **Dynamic backgrounds:** The background gradient changes to match the selected agent.
