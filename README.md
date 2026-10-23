@@ -1,6 +1,6 @@
 # VALORANT Agent Browser
 
-A fan-made, interactive agent browser inspired by the agent selection screen in **VALORANT**. Built with Next.js, React, and TypeScript, the interface presents playable agents with their portraits, roles, abilities, and agent-specific background gradients.
+A fan-made recreation of the **VALORANT Agent Browser** visual design introduced in Patch 5.03 on August 9, 2022 ([official patch notes](https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-5-03/)). Built with Next.js, React, and TypeScript, it presents playable agents with their portraits, roles, abilities, and agent-specific background gradients.
 
 **Live demo:** https://valorantagentsbrowser.vercel.app/
 
