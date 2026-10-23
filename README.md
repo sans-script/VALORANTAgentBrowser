@@ -2,8 +2,6 @@
 
 A fan-made recreation of the **VALORANT Agent Browser** visual design introduced in Patch 5.03 on August 9, 2022 ([official patch notes](https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-5-03/)). Built with Next.js, React, and TypeScript, it presents playable agents with their portraits, roles, abilities, and agent-specific background gradients.
 
-[Live demo](valorantagentsbrowser.vercel.app)
-
 ![VALORANT Agent Browser preview](https://github.com/user-attachments/assets/7165e340-d6c8-4fca-8ff7-0c01fdfa9089)
 
 ## Features
